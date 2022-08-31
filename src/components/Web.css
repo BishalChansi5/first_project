@@ -1,0 +1,42 @@
+.Web{
+    text-align: center;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.logo
+.form
+.lists {
+    margin: 20px;
+    padding: 30px;
+}
+
+.form input {
+    margin: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.remove button {
+    margin: 10px;
+    padding: 10px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #143cde;
+    color: #fff;
+}
+
+.lists h3 {
+    color: #f00;
+    margin: 20px 0;
+}
+
+.lists ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+.lists ul li {
+    color: palevioletred;
+}

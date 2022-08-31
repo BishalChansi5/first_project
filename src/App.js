@@ -1,14 +1,14 @@
 
 import './App.css';
-import Hello from './components/Hello';
+import Web from './components/Web';
 
 function App() {
   return (
     <div className="App">
       
-      <Hello place="Bishal"/>
+      {/* <Hello place="Bishal"/> */}
+      <Web/>
     </div>
   );
 }
-
 export default App;
