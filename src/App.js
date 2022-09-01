@@ -1,5 +1,6 @@
 
 import './App.css';
+import Todo from './components/Todo';
 import Web from './components/Web';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       
       {/* <Hello place="Bishal"/> */}
       <Web/>
+      {/* <Todo name={"Bishal"} a={"hi"}/> */}
     </div>
   );
 }

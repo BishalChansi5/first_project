@@ -10,12 +10,25 @@ const Web = () => {
   ])
 
   console.log (inputData);
-function handleSubmit(){
-  setTodos([...todos,inputData])
-  setInputData(' ')
+const handleSubmit= () =>{//function declared
+  setTodos([...todos,inputData])//passing the value of array in inputData variable when button is clicked
+  setInputData(' ')//making the text box empty after taking value
+  
 }
-function handleRemove(){
-  setTodos([ ])
+function handleRemove(){//function declared
+  setTodos([ ])//remove all value of array
+}
+function deleteTodo(index){
+ const newTodos=[...todos]//value of array put in newTodos string[]
+ newTodos.splice(index)//delete the value of selected index
+ setTodos(newTodos)//remaining value of array after deleting selected value
+}
+function updateTodo(index){
+const newTodos=[...todos]
+newTodos.splice(index,1)
+setTodos(newTodos)
+
+// setTodos(['hello'])
 }
   return (
     <div className='Web'>
@@ -29,6 +42,8 @@ function handleRemove(){
                  value={inputData} 
                  onChange={(e)=> setInputData (e.target.value)}
             />
+          </div>
+          <div className='form-btn'>
             <input 
             type="button" 
             value="Add Todo"
@@ -43,7 +58,12 @@ function handleRemove(){
            <ul>
             {
             todos.map((todo)=>(
-              <li>{todo}</li>
+              <li>
+                {todo}
+                {/* //value of array one at a time */}
+                <input type="button" value="edit" onClick={()=> updateTodo(todos.indexOf(todo))}/>
+                <input type="button" value="delete" onClick={()=> deleteTodo(todos.indexOf(todo))}/>
+              </li>
             ))
           }
             <li></li>
