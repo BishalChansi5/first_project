@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Web.css'
 const Web = () => {
+  const [inputData,setInputData]=useState(' ')
+  const [todos,setTodos]=useState([
+    "walk for fresh",
+    "Rest a while",
+    "Feed a dog",
+    "Today is thursday"
+  ])
+
   return (
     <div className='Web'>
         <div className='logo'>
@@ -13,9 +21,13 @@ const Web = () => {
         <div className='lists'>
            <h3>Todo Lists</h3>
            <ul>
-            <li>Hello</li>
-            <li>Task 1</li>
-            <li>Task 3</li>
+            {
+            todos.map((todo)=>(
+              <li>{todo}</li>
+            ))
+          }
+            <li></li>
+           
            </ul>
         </div>
         <div className='remove'>
