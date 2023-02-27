@@ -6,7 +6,7 @@
     border-style: dashed;
     height: 500px;
     width: 300px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     
 }
 

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+
+
 import './Web.css'
 const Web = () => {
   const [inputData,setInputData]=useState(' ')
